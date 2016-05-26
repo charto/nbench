@@ -1,0 +1,9 @@
+node_modules/
+typings/
+build/*/build
+auto*.gypi
+*.js
+*.d.ts
+*.log.*
+*.log
+*.tgz

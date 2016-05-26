@@ -1,0 +1,35 @@
+{
+  "name": "nbench",
+  "version": "0.0.1",
+  "description": "nbind benchmark",
+  "main": "dist/cwait.js",
+  "scripts": {
+    "tsc": "tsc",
+    "typings": "typings",
+    "emcc-path": "emcc-path",
+    "autogypi": "autogypi",
+    "node-gyp": "node-gyp",
+    "install":                                   "cd build/native && autogypi && node-gyp configure build",
+    "prepublish": "echo typings install && tsc && cd build/asmjs  && autogypi && node-gyp configure build --asmjs=1",
+    "start": "node dist/main.js"
+  },
+  "author": "Juha Järvi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charto/nbench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charto/nbench/issues"
+  },
+  "homepage": "https://github.com/charto/nbench#readme",
+  "devDependencies": {
+    "autogypi": "~0.2.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
+  "dependencies": {
+    "nbind": "~0.2.0",
+    "node-gyp": "^3.3.1"
+  }
+}
